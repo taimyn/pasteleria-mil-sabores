@@ -169,3 +169,74 @@ footer li {
   box-shadow: 0 4px 10px rgba(139, 69, 19, 0.12);
   flex: 1 1 200px;
 }
+
+/* ---------- Formularios ---------- */
+form.formulario {
+  background-color: white;
+  border-radius: 12px;
+  padding: 28px;
+  max-width: 640px;
+  box-shadow: 0 4px 10px rgba(139, 69, 19, 0.10);
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e0cba8;
+  border-radius: 8px;
+  font-family: var(--fuente-texto);
+  font-size: 15px;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--color-chocolate);
+}
+
+.campo .error {
+  color: #b71c1c;
+  font-size: 13px;
+  margin-top: 4px;
+  display: none;
+}
+
+.campo.invalido .error {
+  display: block;
+}
+
+.campo.invalido input,
+.campo.invalido textarea {
+  border-color: #b71c1c;
+}
+
+.campo .ayuda {
+  display: block;
+  font-size: 12px;
+  color: var(--color-texto-suave, #8d6e63);
+  margin-top: 4px;
+}
+
+.mensaje-exito {
+  background-color: #dff0d8;
+  color: #276227;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  display: none;
+}
+
+.mensaje-exito.visible {
+  display: block;
+}
