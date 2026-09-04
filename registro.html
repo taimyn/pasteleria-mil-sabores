@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Pastelería Mil Sabores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pasteleria Mil Sabores</h1>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.html">Iniciar sesión</a>
+            <a href="registro.html">Registrarme</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Crear cuenta</h2>
+        <p>Regístrate para guardar tus datos y ver el estado de tus pedidos.</p>
+
+        <div class="mensaje-exito" id="mensajeExito">
+            ¡Cuenta creada correctamente! Ya puedes iniciar sesión.
+        </div>
+
+        <form class="formulario" id="formRegistro" novalidate>
+
+            <div class="campo" id="campoRun">
+                <label for="run">RUT (sin puntos ni guion, ej: 19011022K)</label>
+                <input type="text" id="run" name="run" maxlength="9" autocomplete="off">
+                <span class="error">Ingresa un RUT válido (7 a 9 caracteres, sin puntos ni guion).</span>
+            </div>
+
+            <div class="fila-2col">
+                <div class="campo" id="campoNombre">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="50" autocomplete="given-name">
+                    <span class="error">Ingresa tu nombre (máx. 50 caracteres).</span>
+                </div>
+
+                <div class="campo" id="campoApellidos">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" maxlength="100" autocomplete="family-name">
+                    <span class="error">Ingresa tus apellidos (máx. 100 caracteres).</span>
+                </div>
+            </div>
+
+            <div class="campo" id="campoCorreo">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" maxlength="100" autocomplete="email">
+                <span class="error">Ingresa un correo @duoc.cl, @profesor.duoc.cl o @gmail.com</span>
+            </div>
+
+            <div class="fila-2col">
+                <div class="campo" id="campoPassword">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" autocomplete="new-password">
+                    <span class="error">Debe tener entre 4 y 10 caracteres.</span>
+                </div>
+
+                <div class="campo" id="campoPassword2">
+                    <label for="password2">Confirmar contraseña</label>
+                    <input type="password" id="password2" name="password2" autocomplete="new-password">
+                    <span class="error">Las contraseñas no coinciden.</span>
+                </div>
+            </div>
+
+            <div class="campo" id="campoFechaNacimiento">
+                <label for="fechaNacimiento">Fecha de nacimiento (opcional)</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" autocomplete="bday">
+            </div>
+
+            <div class="fila-2col">
+                <div class="campo" id="campoRegion">
+                    <label for="region">Región</label>
+                    <select id="region" name="region">
+                        <option value="">-- Selecciona tu región --</option>
+                    </select>
+                    <span class="error">Selecciona tu región.</span>
+                </div>
+
+                <div class="campo" id="campoComuna">
+                    <label for="comuna">Comuna</label>
+                    <select id="comuna" name="comuna">
+                        <option value="">-- Primero elige una región --</option>
+                    </select>
+                    <span class="error">Selecciona tu comuna.</span>
+                </div>
+            </div>
+
+            <div class="campo" id="campoDireccion">
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion" maxlength="300" autocomplete="street-address">
+                <span class="error">Ingresa tu dirección (máx. 300 caracteres).</span>
+            </div>
+
+            <button type="submit" class="btn">Crear cuenta</button>
+        </form>
+    </main>
+
+    <footer>
+        <section>
+            <ul>
+                <li>Whatsapp: <em>+5699800231</em></li>
+                <li>Gmail: pasteleria_MilSabores@gmail.com</li>
+                <li>Instagram: Mil_Sabores.pasteleria</li>
+            </ul>
+        </section>
+    </footer>
+
+    <script src="js/registro.js"></script>
+</body>
+
+</html>

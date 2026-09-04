@@ -240,3 +240,31 @@ form.formulario {
 .mensaje-exito.visible {
   display: block;
 }
+
+/* ---------- Formularios: layout de 2 columnas y selects ---------- */
+.fila-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 16px;
+}
+
+@media (min-width: 640px) {
+  .fila-2col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.campo select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e0cba8;
+  border-radius: 8px;
+  font-family: var(--fuente-texto);
+  font-size: 15px;
+  background-color: white;
+}
+
+.campo select:focus {
+  outline: none;
+  border-color: var(--color-chocolate);
+}
