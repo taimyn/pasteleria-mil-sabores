@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Pastelería Mil Sabores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pasteleria Mil Sabores</h1>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.html">Iniciar sesión</a>
+            <a href="registro.html">Registrarme</a>
+            <a href="carrito.html">Carrito <span class="contador-carrito" id="contadorCarrito">0</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Nuestro catálogo</h2>
+        <p>Encuentra la torta o postre perfecto para cada ocasión.</p>
+
+        <section id="productos">
+
+            <article>
+                <img src="images/imagestortachocolate.jpg" width="300" height="200" alt="Torta cuadrada de chocolate con ganache">
+                <h3>Torta Cuadrada de Chocolate</h3>
+                <p class="categoria">Tortas Cuadradas</p>
+                <p>Deliciosa torta de chocolate con capas de ganache y un toque de avellanas. Personalizable con mensajes especiales.</p>
+                <p>$45.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="TC001" data-nombre="Torta Cuadrada de Chocolate" data-precio="45000">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/torta_frutas.jpg" width="300" height="200" alt="Torta cuadrada de frutas frescas">
+                <h3>Torta Cuadrada de Frutas</h3>
+                <p class="categoria">Tortas Cuadradas</p>
+                <p>Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de vainilla, ideal para celebraciones.</p>
+                <p>$50.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="TC002" data-nombre="Torta Cuadrada de Frutas" data-precio="50000">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/imagesVinilla.jpg" width="300" height="200" alt="Torta circular de vainilla" class="img-ajuste-arriba">
+                <h3>Torta Circular de Vainilla</h3>
+                <p class="categoria">Tortas Circulares</p>
+                <p>Bizcocho de vainilla clásico relleno con crema pastelera y cubierto con un glaseado dulce, perfecto para cualquier ocasión.</p>
+                <p>$40.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="TT001" data-nombre="Torta Circular de Vainilla" data-precio="40000">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/torta_circular_manjar.jpg" width="300" height="200" alt="Torta circular de manjar con nueces">
+                <h3>Torta Circular de Manjar</h3>
+                <p class="categoria">Tortas Circulares</p>
+                <p>Torta tradicional chilena con manjar y nueces, un deleite para los amantes de los sabores dulces y clásicos.</p>
+                <p>$42.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="TT002" data-nombre="Torta Circular de Manjar" data-precio="42000">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/mousse_chocolate.jpg" width="300" height="200" alt="Mousse individual de chocolate">
+                <h3>Mousse de Chocolate</h3>
+                <p class="categoria">Postres Individuales</p>
+                <p>Postre individual cremoso y suave, hecho con chocolate de alta calidad, ideal para los amantes del chocolate.</p>
+                <p>$5.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="PI001" data-nombre="Mousse de Chocolate" data-precio="5000">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/imagesTiramisu.jpg" width="300" height="200" alt="Tiramisú clásico individual">
+                <h3>Tiramisú Clásico</h3>
+                <p class="categoria">Postres Individuales</p>
+                <p>Postre italiano individual con capas de café, mascarpone y cacao, perfecto para finalizar cualquier comida.</p>
+                <p>$5.500</p>
+                <button type="button" class="btn btn-agregar" data-codigo="PI002" data-nombre="Tiramisú Clásico" data-precio="5500">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/torta_naranja.jpg" width="300" height="200" alt="Torta sin azúcar de naranja">
+                <h3>Torta Sin Azúcar de Naranja</h3>
+                <p class="categoria">Productos Sin Azúcar</p>
+                <p>Torta ligera y deliciosa, endulzada naturalmente, ideal para quienes buscan opciones más saludables.</p>
+                <p>$48.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="PSA001" data-nombre="Torta Sin Azúcar de Naranja" data-precio="48000">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/cheescacke_sinazucar.jpg" width="300" height="200" alt="Cheesecake sin azúcar">
+                <h3>Cheesecake Sin Azúcar</h3>
+                <p class="categoria">Productos Sin Azúcar</p>
+                <p>Suave y cremoso, este cheesecake es una opción perfecta para disfrutar sin culpa.</p>
+                <p>$47.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="PSA002" data-nombre="Cheesecake Sin Azúcar" data-precio="47000">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/empanada_dulce.jpg" width="300" height="200" alt="Empanada de manzana">
+                <h3>Empanada de Manzana</h3>
+                <p class="categoria">Pastelería Tradicional</p>
+                <p>Pastelería tradicional rellena de manzanas especiadas, perfecta para un dulce desayuno o merienda.</p>
+                <p>$3.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="PT001" data-nombre="Empanada de Manzana" data-precio="3000">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/tarta_santiago.jpg" width="300" height="200" alt="Tarta de Santiago con almendras">
+                <h3>Tarta de Santiago</h3>
+                <p class="categoria">Pastelería Tradicional</p>
+                <p>Tradicional tarta española hecha con almendras, azúcar y huevos, una delicia para los amantes de los postres clásicos.</p>
+                <p>$6.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="PT002" data-nombre="Tarta de Santiago" data-precio="6000">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/brownie_chocolate.jpg" width="300" height="200" alt="Brownie sin gluten">
+                <h3>Brownie Sin Gluten</h3>
+                <p class="categoria">Productos Sin Gluten</p>
+                <p>Rico y denso, este brownie es perfecto para quienes necesitan evitar el gluten sin sacrificar el sabor.</p>
+                <p>$4.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="PG001" data-nombre="Brownie Sin Gluten" data-precio="4000">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/pancito.jpg" width="300" height="200" alt="Pan sin gluten">
+                <h3>Pan Sin Gluten</h3>
+                <p class="categoria">Productos Sin Gluten</p>
+                <p>Suave y esponjoso, ideal para sándwiches o para acompañar cualquier comida.</p>
+                <p>$3.500</p>
+                <button type="button" class="btn btn-agregar" data-codigo="PG002" data-nombre="Pan Sin Gluten" data-precio="3500">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/vegan_chocholate.jpg" width="300" height="200" alt="Torta vegana de chocolate">
+                <h3>Torta Vegana de Chocolate</h3>
+                <p class="categoria">Productos Vegana</p>
+                <p>Torta de chocolate húmeda y deliciosa, hecha sin productos de origen animal, perfecta para veganos.</p>
+                <p>$50.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="PV001" data-nombre="Torta Vegana de Chocolate" data-precio="50000">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/galletas_avena.jpg" width="300" height="200" alt="Galletas veganas de avena">
+                <h3>Galletas Veganas de Avena</h3>
+                <p class="categoria">Productos Vegana</p>
+                <p>Crujientes y sabrosas, estas galletas son una excelente opción para un snack saludable y vegano.</p>
+                <p>$4.500</p>
+                <button type="button" class="btn btn-agregar" data-codigo="PV002" data-nombre="Galletas Veganas de Avena" data-precio="4500">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/imagesEspecial.jpg" width="300" height="200" alt="Torta especial de cumpleaños">
+                <h3>Torta Especial de Cumpleaños</h3>
+                <p class="categoria">Tortas Especiales</p>
+                <p>Diseñada especialmente para celebraciones, personalizable con decoraciones y mensajes únicos.</p>
+                <p>$55.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="TE001" data-nombre="Torta Especial de Cumpleaños" data-precio="55000">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="images/torta_matrimonio.jpg" width="300" height="200" alt="Torta especial de boda" class="img-ajuste-arriba">
+                <h3>Torta Especial de Boda</h3>
+                <p class="categoria">Tortas Especiales</p>
+                <p>Elegante y deliciosa, esta torta está diseñada para ser el centro de atención en cualquier boda.</p>
+                <p>$60.000</p>
+                <button type="button" class="btn btn-agregar" data-codigo="TE002" data-nombre="Torta Especial de Boda" data-precio="60000">Añadir al carrito</button>
+            </article>
+
+        </section>
+
+        <p class="ver-todos"><a href="index.html">← Volver al inicio</a></p>
+    </main>
+
+    <footer>
+        <section>
+            <ul>
+                <li>Whatsapp: <em>+5699800231</em></li>
+                <li>Gmail: pasteleria_MilSabores@gmail.com</li>
+                <li>Instagram: Mil_Sabores.pasteleria</li>
+            </ul>
+        </section>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>
