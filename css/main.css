@@ -355,3 +355,60 @@ form.formulario {
 .blog-card .contenido h3 {
   margin-top: 0;
 }
+
+.link-producto {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.link-producto:hover h3 {
+  text-decoration: underline;
+}
+
+
+/* ---------- Detalle de producto ---------- */
+.detalle-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(139, 69, 19, 0.10);
+}
+
+@media (min-width: 700px) {
+  .detalle-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.detalle-imagen {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.detalle-precio {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-chocolate);
+}
+
+.detalle-info label {
+  display: block;
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.detalle-info input[type="number"] {
+  width: 80px;
+  padding: 8px 12px;
+  border: 2px solid #e0cba8;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  display: block;
+}
