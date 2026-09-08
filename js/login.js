@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputPassword = document.getElementById("password");
     const errorPassword = campoPassword.querySelector(".error");
 
-    // ---- Funciones para cada resultado posible ----
+    //  Funciones para cada resultado posible 
 
     function iniciarSesionExitosa(usuario) {
         mensajeExito.textContent = "¡Bienvenido/a, " + usuario.nombre + "! Sesión iniciada correctamente.";
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         usuarioEncontrado ? verificarPassword(usuarioEncontrado) : marcarCorreoNoExiste();
     }
 
-    // ---- Envío del formulario ----
+    //  Envío del formulario
 
     formulario.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         campoCorreo.classList.remove("invalido");
         campoPassword.classList.remove("invalido");
 
-        // ---- Validar formato de correo ----
+        //  Validar formato de correo 
         const correo = inputCorreo.value.trim().toLowerCase();
         const dominiosValidos = /^[^\s@]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/;
         const correoValidoFormato = correo !== "" && correo.length <= 100 && dominiosValidos.test(correo);
@@ -59,14 +59,14 @@ document.addEventListener("DOMContentLoaded", function () {
         errorCorreo.textContent = correoValidoFormato ? "" : "Ingresa un correo @duoc.cl, @profesor.duoc.cl o @gmail.com";
         campoCorreo.classList.toggle("invalido", !correoValidoFormato);
 
-        // ---- Validar formato de contraseña ----
+        //  Validar formato de contraseña 
         const largoPassword = inputPassword.value.length;
         const passwordValidoFormato = largoPassword >= 4 && largoPassword <= 10;
 
         errorPassword.textContent = passwordValidoFormato ? "" : "La contraseña debe tener entre 4 y 10 caracteres.";
         campoPassword.classList.toggle("invalido", !passwordValidoFormato);
 
-        // ---- Solo buscamos en la "base de datos" si el formato está bien ----
+        // Solo buscamos en la "base de datos" si el formato está bien 
         const formularioValido = correoValidoFormato && passwordValidoFormato;
         formularioValido && buscarUsuario(correo);
     });

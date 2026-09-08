@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let formularioValido = true; // asumimos que está bien, y lo desmentimos si algo falla
 
-        // ---- Validar nombre ----
+        // validacion del nombre
         const campoNombre = document.getElementById("campoNombre");
         const inputNombre = document.getElementById("nombre");
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             campoNombre.classList.remove("invalido");
         }
 
-        // ---- Validar correo ----
+        // validar el correo
         const campoCorreo = document.getElementById("campoCorreo");
         const inputCorreo = document.getElementById("correo");
         const correo = inputCorreo.value.trim();
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             campoCorreo.classList.remove("invalido");
         }
 
-        // ---- Validar comentario ----
+        // validamos el comentario
         const campoComentario = document.getElementById("campoComentario");
         const inputComentario = document.getElementById("comentario");
 
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             campoComentario.classList.remove("invalido");
         }
 
-        // ---- Resultado final ----
+        // resultado final de la validacion
         if (formularioValido) {
             mensajeExito.classList.add("visible");
             formulario.reset(); // limpia todos los campos

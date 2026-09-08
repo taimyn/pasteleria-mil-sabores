@@ -1,8 +1,8 @@
 :root {
-  --color-bg: #FFF5E1;       /* Crema Pastel - fondo principal */
-  --color-rosa: #FFC0CB;     /* Rosa Suave - acentos */
-  --color-chocolate: #8B4513;/* Chocolate - botones, header */
-  --color-texto: #5D4037;    /* Marrón Oscuro - texto principal */
+  --color-bg: #FFF5E1;       /* fondo principal */
+  --color-rosa: #FFC0CB;     /* acentos */
+  --color-chocolate: #8B4513;/* botones, header */
+  --color-texto: #5D4037;    /* texto principal */
   --fuente-titulos: "Pacifico", cursive;
   --fuente-texto: "Lato", Arial, sans-serif;
 }
@@ -19,7 +19,7 @@ body {
   line-height: 1.6;
 }
 
-/* ---------- Header ---------- */
+/*  Header */
 header {
   background-color: var(--color-chocolate);
   color: var(--color-bg);
@@ -54,7 +54,7 @@ nav.menu a:hover {
   text-decoration: underline;
 }
 
-/* ---------- Main / títulos / links ---------- */
+/*  Main / títulos / links  */
 main {
   max-width: 1100px;
   margin: 30px auto;
@@ -80,7 +80,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* ---------- Grid de productos ---------- */
+/* Grid de productos */
 #productos {
   display: grid;
   grid-template-columns: 1fr;
@@ -129,14 +129,14 @@ a:hover {
   color: var(--color-chocolate);
 }
 
-/* ---------- Ver todos los productos ---------- */
+/*  Ver todos los productos  */
 .ver-todos {
   text-align: center;
   margin-top: 20px;
   font-weight: 700;
 }
 
-/* ---------- Footer ---------- */
+/* Footer  */
 footer {
   background-color: var(--color-chocolate);
   color: var(--color-bg);
@@ -170,7 +170,7 @@ footer li {
   flex: 1 1 200px;
 }
 
-/* ---------- Formularios ---------- */
+/*  Formularios  */
 form.formulario {
   background-color: white;
   border-radius: 12px;
@@ -241,7 +241,7 @@ form.formulario {
   display: block;
 }
 
-/* ---------- Formularios: layout de 2 columnas y selects ---------- */
+/*  Formularios: layout de 2 columnas y selects */
 .fila-2col {
   display: grid;
   grid-template-columns: 1fr;
@@ -275,7 +275,7 @@ form.formulario {
 }
 
 
-/* ---------- Tabla del carrito ---------- */
+/* Tabla del carrito  */
 .tabla-carrito {
   width: 100%;
   border-collapse: collapse;
@@ -324,7 +324,7 @@ form.formulario {
   margin-top: 16px;
 }
 
-/* ---------- Blog ---------- */
+/*  Blogs */
 .blog-card {
   display: grid;
   grid-template-columns: 1fr;
@@ -367,7 +367,7 @@ form.formulario {
 }
 
 
-/* ---------- Detalle de producto ---------- */
+/*  Detalle de producto */
 .detalle-grid {
   display: grid;
   grid-template-columns: 1fr;

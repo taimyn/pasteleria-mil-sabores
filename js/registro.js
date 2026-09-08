@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectRegion = document.getElementById("region");
     const selectComuna = document.getElementById("comuna");
 
-    // 1. Llenar el select de regiones al cargar la página
+    // 1. llenar el select de regiones al cargar la página
     for (const region in regionesConComunas) {
         const opcion = document.createElement("option");
         opcion.value = region;
@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
         selectRegion.appendChild(opcion);
     }
 
-    // 2. Cuando cambie la región, actualizar las comunas
+    // 2. cuando cambie la región, actualizar las comunas
     selectRegion.addEventListener("change", function () {
         const regionElegida = selectRegion.value;
 
-        // Vaciar el select de comunas (dejando solo la opción por defecto)
+        // vaciar el select de comunas (dejando solo la opción por defecto)
         selectComuna.innerHTML = '<option value="">-- Selecciona tu comuna --</option>';
 
         if (regionElegida !== "") {
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let formularioValido = true;
 
-        // ---- RUT ----
+        //  RUT 
         const campoRun = document.getElementById("campoRun");
         const inputRun = document.getElementById("run");
 
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
             campoRun.classList.remove("invalido");
         }
 
-        // ---- Nombre ----
+        // Nombre 
         const campoNombre = document.getElementById("campoNombre");
         const inputNombre = document.getElementById("nombre");
 
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
             campoNombre.classList.remove("invalido");
         }
 
-        // ---- Apellidos ----
+        //  Apellidos 
         const campoApellidos = document.getElementById("campoApellidos");
         const inputApellidos = document.getElementById("apellidos");
 
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
             campoApellidos.classList.remove("invalido");
         }
 
-        // ---- Correo ----
+        //  Correo 
         const campoCorreo = document.getElementById("campoCorreo");
         const inputCorreo = document.getElementById("correo");
         const correo = inputCorreo.value.trim();
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
             campoCorreo.classList.remove("invalido");
         }
 
-        // ---- Contraseña ----
+        //  Contraseña 
         const campoPassword = document.getElementById("campoPassword");
         const inputPassword = document.getElementById("password");
         const largoPassword = inputPassword.value.length;
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
             campoPassword.classList.remove("invalido");
         }
 
-        // ---- Confirmar contraseña ----
+        // Confirmar contraseña 
         const campoPassword2 = document.getElementById("campoPassword2");
         const inputPassword2 = document.getElementById("password2");
 
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
             campoPassword2.classList.remove("invalido");
         }
 
-        // ---- Región ----
+        //  Región 
         const campoRegion = document.getElementById("campoRegion");
 
         if (selectRegion.value === "") {
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
             campoRegion.classList.remove("invalido");
         }
 
-        // ---- Comuna ----
+        //  Comuna 
         const campoComuna = document.getElementById("campoComuna");
 
         if (selectComuna.value === "") {
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
             campoComuna.classList.remove("invalido");
         }
 
-        // ---- Dirección ----
+        //  Dirección 
         const campoDireccion = document.getElementById("campoDireccion");
         const inputDireccion = document.getElementById("direccion");
 
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
             campoDireccion.classList.remove("invalido");
         }
 
-        // ---- Resultado final ----
+        //  Resultado final 
         if (formularioValido) {
             mensajeExito.classList.add("visible");
             formulario.reset();

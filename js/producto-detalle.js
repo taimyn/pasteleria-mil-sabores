@@ -1,23 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // 1. Leer el parámetro "codigo" desde la URL
+    // Leer el parámetro "codigo" desde la URL
     const parametrosURL = new URLSearchParams(window.location.search);
     const codigoBuscado = parametrosURL.get("codigo");
 
-    // 2. Buscar el producto que tenga ese código
+    // Buscar el producto que tenga ese código
     const producto = listaProductos.find(function (p) {
         return p.codigo === codigoBuscado;
     });
 
     const contenedor = document.getElementById("detalleProducto");
 
-    // 3. Si no se encontró el producto, mostrar un mensaje y detener todo
+    // Si no se encontró el producto, mostrar un mensaje y detener todo
     if (producto === undefined) {
         contenedor.innerHTML = "<p>No encontramos ese producto. <a href='productos.html'>Volver al catálogo</a></p>";
         return;
     }
 
-    // 4. Si sí se encontró, armar el HTML del detalle
+    // Si sí se encontró, armar el HTML del detalle
     contenedor.innerHTML =
         "<div class='detalle-grid'>" +
             "<img src='" + producto.imagen + "' alt='" + producto.nombre + "' class='detalle-imagen'>" +
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "</div>" +
         "</div>";
 
-    // 5. Conectar el botón "Añadir al carrito" de esta página
+    // Conectar el botón "Añadir al carrito" de esta página
     const botonAgregar = document.getElementById("botonAgregarDetalle");
 
     botonAgregar.addEventListener("click", function () {
