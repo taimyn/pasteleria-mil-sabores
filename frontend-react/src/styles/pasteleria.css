@@ -1,0 +1,490 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+/* ==================================
+   COLORES Y ESTILOS GENERALES
+================================== */
+
+:root {
+  --verde: #617b68;
+  --verde-oscuro: #344f3e;
+  --verde-claro: #e6eee5;
+  --crema: #faf8f2;
+  --beige: #eee7d9;
+  --cafe: #594b40;
+  --texto: #303b32;
+}
+
+body {
+  margin: 0;
+  background-color: var(--crema);
+  color: var(--texto);
+  font-family: "DM Sans", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ==================================
+   MENÚ DE NAVEGACIÓN
+================================== */
+
+.navbar-pasteleria {
+  background-color: var(--crema);
+  border-bottom: 1px solid var(--beige);
+  padding: 18px 0;
+}
+
+.marca-pasteleria {
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+  text-decoration: none;
+}
+
+.marca-pasteleria:hover {
+  color: var(--verde);
+}
+
+.navbar-pasteleria .nav-link {
+  color: var(--verde-oscuro);
+  font-weight: 600;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+
+.navbar-pasteleria .nav-link:hover,
+.navbar-pasteleria .nav-link.active {
+  color: var(--verde);
+}
+
+/* ==================================
+   BOTONES ORIGINALES
+================================== */
+
+.btn-verde {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--verde-oscuro);
+  color: white;
+  border: 2px solid var(--verde-oscuro);
+  border-radius: 30px;
+  padding: 13px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-verde:hover {
+  background-color: var(--verde);
+  border-color: var(--verde);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-contorno {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--verde-oscuro);
+  border: 2px solid var(--verde-oscuro);
+  border-radius: 30px;
+  padding: 13px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-contorno:hover {
+  background-color: var(--verde-oscuro);
+  color: white;
+}
+
+/* ==================================
+   TÍTULOS Y SECCIONES
+================================== */
+
+.seccion {
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+
+.seccion-verde {
+  background-color: var(--verde-claro);
+}
+
+.etiqueta {
+  color: var(--verde);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.titulo-seccion {
+  color: var(--verde-oscuro);
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 600;
+}
+
+.texto-suave {
+  color: #788177;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ==================================
+   PORTADA ORIGINAL
+================================== */
+
+.hero-pasteleria {
+  background-color: var(--verde-claro);
+  padding: 90px 0;
+}
+
+.hero-titulo {
+  color: var(--verde-oscuro);
+  font-size: clamp(45px, 5vw, 72px);
+  line-height: 1.12;
+}
+
+.hero-imagen {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 18px 40px rgba(40, 65, 45, 0.12);
+}
+
+/* ==================================
+   NUEVA PORTADA CENTRADA
+================================== */
+
+.inicio-portada {
+  background-color: var(--crema);
+  padding: 100px 20px 95px;
+  text-align: center;
+}
+
+.inicio-contenido {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.inicio-subtitulo {
+  color: var(--verde);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 28px;
+}
+
+.inicio-titulo {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 7vw, 95px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -2px;
+  color: var(--verde-oscuro);
+  margin-bottom: 26px;
+}
+
+.inicio-descripcion {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6f756d;
+  max-width: 520px;
+  margin: 0 auto 34px;
+}
+
+.inicio-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--verde-oscuro);
+  color: white;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.inicio-boton:hover {
+  background-color: var(--verde);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.inicio-boton span {
+  font-size: 19px;
+}
+
+/* ==================================
+   GALERÍA DE CINCO FOTOGRAFÍAS
+================================== */
+
+.inicio-galeria-seccion {
+  background-color: var(--crema);
+  overflow: hidden;
+}
+
+.inicio-galeria {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.inicio-galeria::-webkit-scrollbar {
+  display: none;
+}
+
+.inicio-foto {
+  flex: 0 0 20%;
+  height: 350px;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.inicio-foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.inicio-foto img:hover {
+  transform: scale(1.04);
+}
+
+.inicio-galeria-controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 25px 15px;
+}
+
+.inicio-galeria-controles span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--verde);
+  font-weight: 700;
+  text-align: center;
+}
+
+.inicio-galeria-controles button {
+  border: 1px solid #a5b4a5;
+  background: transparent;
+  color: var(--verde-oscuro);
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.inicio-galeria-controles button:hover {
+  background-color: var(--verde-oscuro);
+  color: white;
+}
+
+/* ==================================
+   TARJETAS DE PRODUCTOS
+================================== */
+
+.producto-card {
+  background-color: white;
+  border: 1px solid #edf0e9;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 8px 25px rgba(40, 65, 45, 0.06);
+  transition: all 0.3s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(40, 65, 45, 0.12);
+}
+
+.producto-imagen {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.producto-categoria {
+  color: var(--verde);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.producto-precio {
+  color: var(--verde-oscuro);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ==================================
+   FILTROS DEL CATÁLOGO
+================================== */
+
+.categoria-btn {
+  background-color: white;
+  color: var(--verde-oscuro);
+  border: 1px solid #ccd8cb;
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categoria-btn:hover,
+.categoria-btn.activo {
+  background-color: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+  color: white;
+}
+
+/* ==================================
+   OFERTAS Y PROMOCIONES
+================================== */
+
+.banner-natural {
+  background-color: var(--verde-claro);
+  border-radius: 25px;
+  padding: 60px 35px;
+}
+
+.inicio-banner {
+  background-color: var(--verde-claro);
+  padding: 70px 25px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.inicio-banner h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--verde-oscuro);
+  font-size: clamp(30px, 4vw, 48px);
+  margin-bottom: 20px;
+}
+
+.inicio-banner p {
+  color: #617065;
+  margin-bottom: 28px;
+}
+
+.oferta-etiqueta {
+  display: inline-block;
+  background-color: var(--verde-oscuro);
+  color: white;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.precio-anterior {
+  color: #969d95;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+/* ==================================
+   DETALLE DEL PRODUCTO
+================================== */
+
+.detalle-imagen {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(40, 65, 45, 0.1);
+}
+
+/* ==================================
+   PIE DE PÁGINA
+================================== */
+
+.footer-pasteleria {
+  background-color: var(--verde-oscuro);
+  color: white;
+  padding: 55px 0 25px;
+}
+
+.footer-pasteleria a {
+  color: #e0e9dd;
+  text-decoration: none;
+}
+
+.footer-pasteleria a:hover {
+  color: white;
+}
+
+/* ==================================
+   DISEÑO PARA CELULARES
+================================== */
+
+@media (max-width: 768px) {
+  .inicio-portada {
+    padding: 75px 15px 70px;
+  }
+
+  .inicio-titulo {
+    font-size: 48px;
+    letter-spacing: -1px;
+  }
+
+  .inicio-descripcion {
+    font-size: 15px;
+  }
+
+  .inicio-foto {
+    flex: 0 0 50%;
+    height: 270px;
+  }
+
+  .inicio-galeria-controles {
+    gap: 16px;
+  }
+
+  .inicio-galeria-controles span {
+    font-size: 9px;
+  }
+
+  .inicio-banner {
+    padding: 45px 20px;
+  }
+
+  .seccion {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .hero-imagen {
+    height: 300px;
+  }
+}
