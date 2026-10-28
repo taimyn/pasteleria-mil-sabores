@@ -8,6 +8,7 @@ import { useProductos } from './productos-admin';
 import Nosotros from './Nosotros';
 import Contacto from './Contacto';
 import Blogs, { BlogDetalle } from './Blogs';
+import Carrito from './Carrito';
 
 
 
@@ -37,7 +38,7 @@ function Cabecera() {
         <Link to="/contacto">Contacto</Link>
         <a href="/login.html">Iniciar sesión</a>
         <a href="/registro.html">Registrarme</a>
-        <a href="/carrito.html">Carrito</a>
+        <Link to="/carrito">Carrito</Link>
         <Link to="/admin">Administración</Link>
       </nav>
     </header>
@@ -291,9 +292,9 @@ function Detalle() {
           </button>
 
           <div className="mt-3">
-            <a href="/carrito.html">
-              Ir al carrito
-            </a>
+            <Link to="/carrito">
+            Ir al carrito
+            </Link>
           </div>
         </div>
       </div>
@@ -344,8 +345,12 @@ export default function App() {
                     element={<Admin />}
                 />
 
+                <Route path="/carrito" element={<Carrito />} />
+
                 <Route path="*" element={<Inicio />} />
             </Routes>
+
+            
 
             <Pie />
         </>
