@@ -412,3 +412,18 @@ form.formulario {
   margin-bottom: 16px;
   display: block;
 }
+
+/* Menu para celulares */
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav.menu {
+        gap: 10px;
+    }
+
+    nav.menu a {
+        font-size: 12px;
+    }
+}
