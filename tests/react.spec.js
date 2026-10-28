@@ -137,4 +137,50 @@ describe('Componentes React - Pastelería Mil Sabores', () => {
     expect(productos.length).toBe(0);
     expect(window.confirm).toHaveBeenCalled();
   });
+
+  
+  it('aumenta la cantidad de productos del carrito', async () => {
+    localStorage.setItem('carritoMilSabores', JSON.stringify([
+      { codigo: 'TC001', nombre: 'Torta de Chocolate', precio: 15000, cantidad: 1 }
+    ]));
+
+    await mostrarPagina('/carrito');
+
+    const botones = [...contenedor.querySelectorAll('button')];
+    const boton = botones.find(b => b.textContent.trim() === '+');
+
+    expect(boton).toBeTruthy();
+
+    await act(async () => {
+      boton.click();
+    });
+
+    const carrito = JSON.parse(localStorage.getItem('carritoMilSabores'));
+
+    expect(carrito[0].cantidad).toBe(2);
+    expect(contenedor.textContent).toContain('$30.000');
+  });
+
+  it('elimina un producto del carrito', async () => {
+    localStorage.setItem('carritoMilSabores', JSON.stringify([
+      { codigo: 'TC001', nombre: 'Torta de Chocolate', precio: 15000, cantidad: 1 }
+    ]));
+
+    await mostrarPagina('/carrito');
+
+    const botones = [...contenedor.querySelectorAll('button')];
+    const boton = botones.find(b => b.textContent.trim() === 'Eliminar');
+
+    expect(boton).toBeTruthy();
+
+    await act(async () => {
+      boton.click();
+    });
+
+    const carrito = JSON.parse(localStorage.getItem('carritoMilSabores'));
+
+    expect(carrito.length).toBe(0);
+    expect(contenedor.textContent).toContain('Tu carrito está vacío');
+  });
+
 });
