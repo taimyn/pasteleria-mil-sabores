@@ -324,46 +324,67 @@ form.formulario {
   margin-top: 16px;
 }
 
-/*  Blogs */
+/* Blogs */
 .blog-card {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  background-color: white;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 10px rgba(139, 69, 19, 0.1);
-}
-
-@media (min-width: 700px) {
-  .blog-card {
-    grid-template-columns: 280px 1fr;
-  }
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 10px rgba(139, 69, 19, 0.1);
 }
 
 .blog-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .blog-card .contenido {
-  padding: 20px;
+    min-width: 0;
+    padding: 20px;
 }
 
 .blog-card .contenido h3 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
-.link-producto {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+/* Blogs en computadores */
+@media (min-width: 700px) {
+    .blog-card {
+        grid-template-columns: 280px minmax(0, 1fr);
+    }
+
+    .blog-card img {
+        width: 100%;
+        height: 100%;
+        max-height: 350px;
+        object-fit: cover;
+    }
 }
 
-.link-producto:hover h3 {
-  text-decoration: underline;
+/* Blogs en celulares */
+@media (max-width: 699px) {
+    .blog-card {
+        display: block;
+    }
+
+    .blog-card img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    .blog-card .contenido {
+        padding: 15px;
+    }
 }
 
 
