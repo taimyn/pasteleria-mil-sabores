@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Pasteleria Mil Sabores</title>
+     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pasteleria Mil Sabores</h1>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.html">Iniciar sesión</a>
+            <a href="registro.html">Registrarme</a>
+            <a href="carrito.html">Carrito <span class="contador-carrito" id="contadorCarrito">0</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Iniciar sesion</h2>
+        <p>Ingresa con tu correo y contraseña para ver tus pedidos y beneficios</p>
+
+        <div class="mensaje-exito" id="mensajeExito">
+            ¡Bienvenido/a de vuelta! Sesion iniciada correctamente       
+        </div>
+
+        <form class="formulario" id="formLogin" novalidate>
+
+            <div class="campo" id="campoCorreo">
+                <label for="correo">Correo electronico</label>
+                  <input type="email" id="correo" name="correo" maxlength="100" autocomplete="email">
+                  <span class="error">Ingresa un correo</span>
+                  <span class="ayuda">Usa el mismo correo con el que te registraste.</span>
+
+            </div>
+
+            <div class="campo" id="campoPassword">
+                  <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" autocomplete="current-password">
+                <span class="error">La contraseña debe tener entre 4 y 10 caracteres.</span>
+            </div>
+
+            <button type="submit" class="btn">Iniciar sesion</button>
+
+            <p class="texto-login">
+                ¿Aun no tienes cuenta? <a href="registro.html">registraste aqui</a>
+            </p>
+        </form>
+    </main>
+
+      <footer>
+        <section>
+            <ul>
+                <li>Whatsapp: <em>+5699800231</em></li>
+                <li>Gmail: pasteleria_MilSabores@gmail.com</li>
+                <li>Instagram: Mil_Sabores.pasteleria</li>
+            </ul>
+        </section>
+    </footer>
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

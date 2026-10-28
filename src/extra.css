@@ -1,0 +1,262 @@
+
+@import url('/css/main.css');
+
+/* Botones */
+button {
+    cursor: pointer;
+}
+
+/* Filtros de productos */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 22px;
+}
+
+.filtros button {
+    border: 1px solid #8e6854;
+    background: #fff8ef;
+    color: #4d2f20;
+    padding: 8px 14px;
+    border-radius: 20px;
+}
+
+.filtros button.activo {
+    background: #6a4231;
+    color: white;
+}
+
+/* Precios y descuentos */
+.precio-anterior {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.descuento {
+    background: #7c2e28;
+    color: white;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+/* Tarjetas de productos */
+.tarjeta-react {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 7px;
+}
+
+/* Imágenes de productos */
+#productos .tarjeta-react > a:first-child {
+    display: block;
+    width: 100%;
+}
+
+#productos .tarjeta-react > a:first-child img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta-react img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+/* Nombre y descripción */
+#productos .tarjeta-react h3,
+#productos .tarjeta-react p {
+    margin: 8px 14px;
+}
+
+/* Botones del carrito */
+.tarjeta-react button,
+.detalle-react button {
+    background: #684231;
+    color: white;
+    border: 0;
+    border-radius: 7px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.tarjeta-react button:hover,
+.detalle-react button:hover {
+    background: #8b5a40;
+}
+
+#productos .tarjeta-react .mt-3 {
+    margin: 10px 14px;
+}
+
+/* Detalle de productos */
+.detalle-react {
+    max-width: 1050px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    padding: 18px;
+}
+
+.detalle-react img {
+    width: 100%;
+    max-height: 440px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Acciones */
+.acciones {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mensajes */
+.aviso {
+    margin: 14px auto;
+    text-align: center;
+}
+
+/* Ofertas */
+.enlace-ofertas {
+    display: block;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Contenedor principal */
+.contenedor-react {
+    padding: 20px 0;
+}
+
+/* Diseño para celulares */
+@media (max-width: 700px) {
+    .detalle-react {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .filtros {
+        gap: 8px;
+        margin: 15px;
+    }
+
+    .filtros button {
+        padding: 7px 10px;
+    }
+
+    #productos .tarjeta-react > a:first-child img {
+        height: 190px;
+    }
+}
+
+/* Menu para celulares */
+@media (max-width: 700px) {
+    header h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .menu a {
+        font-size: 12px;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .contenedor-react {
+        padding: 15px;
+    }
+
+    .filtros {
+        gap: 8px;
+        margin: 15px 0;
+    }
+}
+
+/* Blogs */
+#blogs {
+    width: 100%;
+    max-width: 100%;
+}
+
+#blogs .blog-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+#blogs .blog-card img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+#blogs .blog-card .contenido {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+/* Blogs en computadores */
+@media (min-width: 700px) {
+    #blogs .blog-card {
+        display: grid;
+        grid-template-columns: 280px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    #blogs .blog-card img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Blogs en celulares */
+@media (max-width: 699px) {
+    #blogs .blog-card {
+        display: block;
+    }
+
+    #blogs .blog-card img {
+        width: 100%;
+        max-width: 100%;
+        height: auto !important;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    #blogs .blog-card .contenido {
+        padding: 15px;
+    }
+
+    main img.img-fluid {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain;
+    }
+}

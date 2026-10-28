@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Si no se encontró el producto, mostrar un mensaje y detener todo
     if (producto === undefined) {
         contenedor.innerHTML = "<p>No encontramos ese producto. <a href='productos.html'>Volver al catálogo</a></p>";
-        return;
+        return; 
     }
 
     // Si sí se encontró, armar el HTML del detalle
