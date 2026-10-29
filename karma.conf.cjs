@@ -1,8 +1,41 @@
+const fs = require('node:fs/promises');
+const path = require('node:path');
+const { createInstrumenter } = require('istanbul-lib-instrument');
+
+const carpetaSrc = path.join(__dirname, 'src') + path.sep;
+
+const pluginCobertura = {
+    name: 'cobertura-pasteleria',
+    setup(build) {
+        build.onLoad({ filter: /\.jsx?$/ }, async (args) => {
+            if (!args.path.startsWith(carpetaSrc)) {
+                return;
+            }
+
+            const codigo = await fs.readFile(args.path, 'utf8');
+
+            const archivo = path.relative(__dirname, args.path)
+                .split(path.sep)
+                .join('/');
+
+            const instrumentador = createInstrumenter({
+                esModules: true,
+                compact: false,
+                parserPlugins: ['jsx']
+            });
+
+            return {
+                contents: instrumentador.instrumentSync(codigo, archivo),
+                loader: args.path.endsWith('.jsx') ? 'jsx' : 'js'
+            };
+        });
+    }
+};
+
 module.exports = function(config) {
     config.set({
         frameworks: ['jasmine'],
 
-        // Archivos de pruebas
         files: [
             {
                 pattern: 'tests/catalogo.spec.js',
@@ -14,7 +47,6 @@ module.exports = function(config) {
             }
         ],
 
-        // Procesar JavaScript y React
         preprocessors: {
             'tests/catalogo.spec.js': ['esbuild'],
             'tests/react.spec.js': ['esbuild']
@@ -24,11 +56,21 @@ module.exports = function(config) {
             bundle: true,
             target: 'es2020',
             format: 'iife',
-            sourcemap: 'inline'
+            sourcemap: 'inline',
+            plugins: [pluginCobertura]
         },
 
-        // Ejecutar pruebas
-        reporters: ['progress'],
+        reporters: ['progress', 'coverage'],
+
+        coverageReporter: {
+            dir: 'coverage',
+            reporters: [
+                { type: 'text-summary' },
+                { type: 'html', subdir: 'html' },
+                { type: 'lcovonly', subdir: '.' }
+            ]
+        },
+
         browsers: ['ChromeHeadless'],
         singleRun: true,
 
