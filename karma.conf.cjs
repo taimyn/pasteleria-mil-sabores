@@ -1,3 +1,5 @@
+const { esbuildPluginIstanbul } = require("esbuild-plugin-istanbul");
+
 module.exports = function (config) {
   config.set({
     frameworks: ["jasmine"],
@@ -15,17 +17,35 @@ module.exports = function (config) {
       bundle: true,
       format: "iife",
       platform: "browser",
+
       loader: {
         ".js": "jsx",
         ".jsx": "jsx"
       },
-      jsx: "automatic"
+
+      jsx: "automatic",
+
+      plugins: [
+        esbuildPluginIstanbul({
+          name: "istanbul-coverage",
+          filter: /src[\\/].*\.(js|jsx)$/,
+          loader: "jsx"
+        })
+      ]
     },
 
     browsers: ["ChromeHeadless"],
 
     singleRun: true,
 
-    reporters: ["progress"]
+    reporters: ["progress", "coverage"],
+
+    coverageReporter: {
+      dir: "coverage",
+      reporters: [
+        { type: "text-summary" },
+        { type: "html", subdir: "html" }
+      ]
+    }
   });
 };
